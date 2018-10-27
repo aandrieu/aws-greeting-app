@@ -1,0 +1,44 @@
+body {
+    text-align: center;
+    background-color: snow;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+form {
+    margin: 50px;
+}
+
+input:focus {
+    outline:0;
+}
+
+input[type="text"] {
+    font-size: 24px;
+    border-radius: 50px 0 0 50px;
+    border: solid 1px dimgrey;
+    padding: 10px;
+    text-align: center;
+}
+
+input[type="submit"] {
+    font-size: 24px;
+    border-radius: 0 50px 50px 0;
+    border: solid 1px dimgrey;
+    padding: 10px;
+    text-align: center;
+    background-color: deepskyblue;
+    color: white;
+    cursor: pointer;
+}
+
+#result {
+    font-size: 24px;
+}
+
+#metadata {
+    font-size: 18px;
+    color: dimgrey;
+}

@@ -9,6 +9,7 @@ services:
       - ./ui:/usr/share/nginx/html
     depends_on:
       - metadatastore
+      - api
 
   redis:
     image: "redis"
@@ -26,3 +27,15 @@ services:
       - ./metadatastore:/app
     depends_on:
       - redis
+
+  api:
+    build: ./api
+    command: go run main.go
+    environment:
+      - METADATASTORE_URL=http://metadatastore:3000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./api:/go
+    depends_on:
+      - metadatastore
